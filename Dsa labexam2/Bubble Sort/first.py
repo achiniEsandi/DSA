@@ -41,8 +41,8 @@ for i in range(8):
     num = int(input("Enter number to sort: "))
     A.append(num)
 
-               
+print("Before sorting: ", A)               
 bubbleSort(A)
-print(A)               
+print("After sorting: ",A)               
 
 #==============================
