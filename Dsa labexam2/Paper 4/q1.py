@@ -1,27 +1,20 @@
-#Paper Number 4
-
-
-#def calSum(n):
-#    if(n == 1):
-#        return n
- #   else:
- #       sum = 1
- #       for i in range(1,n):
-  #          sum= sum + i
-  #      return sum
-
-
-def calSum(n):
-    if(n == 1):
-        return n
+def power(base, exp):
+    if(exp == 0):
+        return 1
     else:
-        return calSum(n-1) + (n-1) 
+        return base * power(base, exp-1)
     
 
+
 while(True):
-    num = int(input("Enter number: "))
-    if(num == -1): 
-        print("Output: Finished")
+    x = int(input("Enter base: "))
+    if (x == -1):
         break
-    else:
-        print("Output: ",calSum(num)) 
+    
+    n = int(input("Enter exp: "))
+    while(n<0):
+        print("Negative numbers cannot be entered")
+        n = int(input("Enter exp: "))
+
+    print("Output: ", power(x,n))
+        
