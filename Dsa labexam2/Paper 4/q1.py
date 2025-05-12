@@ -1,15 +1,21 @@
 #Paper Number 4
 
 
+#def calSum(n):
+#    if(n == 1):
+#        return n
+ #   else:
+ #       sum = 1
+ #       for i in range(1,n):
+  #          sum= sum + i
+  #      return sum
+
+
 def calSum(n):
     if(n == 1):
         return n
     else:
-        sum = 1
-        for i in range(1,n):
-            sum= sum + i
-        return sum
-
+        return (n-1) + calSum(n-1) 
     
 
 while(True):
