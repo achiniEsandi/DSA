@@ -1,7 +1,7 @@
 def partition(A,p,r):
     x = A[r]
     i = p - 1
-    for j in range(p, r-1):
+    for j in range(p, r):
         if(A[j] <= x):
             i = i + 1
             A[i], A[j] = A[j], A[i]
@@ -20,15 +20,26 @@ while(True):
     else:
         A.append(num)
         
-print("Before sorting: ",A)
+print("Before partitioning: ",A)
 
-partition(A,2,5)
 
-print("After partitioning:", A)
+if len(A) > 1:
+    pivot_index = partition(A, 0, len(A)-1)  # safer
+    print("Pivot index:", pivot_index)
+    print("After partitioning:", A)
+else:
+    print("Not enough elements to partition.")
     
 
 
 
+#####################################
+
+def quicksort(A,p,r):
+    if(p<r):
+        q = partition(A, p, r)
+        quicksort(A, p, q-1)
+        quicksort(A, q+1, r)
 
 
 
