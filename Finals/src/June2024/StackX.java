@@ -55,6 +55,8 @@ class StackX {
                     if (stack.isEmpty() || stack.pop() != '(') return false;
                     break;
             }
+
+            
         }
 
         return stack.isEmpty();
